@@ -2,6 +2,9 @@
 
 [![license](https://img.shields.io/github/license/Minestom/MinestomDataGenerator.svg)](LICENSE)
 
+### This fork is available on [JitPack](https://jitpack.io/#nindza-pro/polar)
+
+
 A world format for Minestom designed for simpler and smaller handling of small worlds, particularly for user generated
 content where size matters.
 
