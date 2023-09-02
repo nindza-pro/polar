@@ -237,7 +237,8 @@ public class PolarLoader implements IChunkLoader {
 
     @Override
     public @NotNull CompletableFuture<Void> saveInstance(@NotNull Instance instance) {
-        return saveChunks(instance.getChunks());
+        return CompletableFuture.completedFuture(null);
+        //return saveChunks(instance.getChunks());
     }
 
     @Override
@@ -247,6 +248,8 @@ public class PolarLoader implements IChunkLoader {
 
     @Override
     public @NotNull CompletableFuture<Void> saveChunks(@NotNull Collection<Chunk> chunks) {
+        return CompletableFuture.completedFuture(null);
+        /**
         var blockCache = new Short2ObjectOpenHashMap<String>();
 
         // Update state of each chunk locally
@@ -264,7 +267,7 @@ public class PolarLoader implements IChunkLoader {
             }, ForkJoinPool.commonPool());
         }
 
-        return CompletableFuture.completedFuture(null);
+        return CompletableFuture.completedFuture(null);**/
     }
 
     private void updateChunkData(@NotNull Short2ObjectMap<String> blockCache, @NotNull Chunk chunk) {
@@ -380,7 +383,7 @@ public class PolarLoader implements IChunkLoader {
 
     @Override
     public @NotNull CompletableFuture<Void> saveChunk(@NotNull Chunk chunk) {
-        return saveChunks(List.of(chunk));
+        return CompletableFuture.completedFuture(null);
     }
 
     private @NotNull String blockToString(@NotNull Block block) {
